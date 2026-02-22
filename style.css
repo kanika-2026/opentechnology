@@ -1,108 +1,73 @@
-body {
-    margin: 0;
-    font-family: 'Segoe UI', sans-serif;
-    background: #f4f6fb;
-    color: #333;
+:root {
+    --primary: #2563eb;
+    --dark: #020617;
+    --glass: rgba(255, 255, 255, 0.05);
+    --accent: #60a5fa;
 }
 
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Inter', sans-serif; background: #0f172a; color: #f8fafc; overflow-x: hidden; }
+
+/* Navigation */
+nav {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 20px 8%; background: rgba(2, 6, 23, 0.8);
+    backdrop-filter: blur(10px); position: sticky; top: 0; z-index: 1000;
+}
+.logo { font-size: 1.4rem; font-weight: 900; letter-spacing: 2px; }
+.logo span { color: var(--primary); }
+.nav-links { list-style: none; display: flex; gap: 30px; }
+.nav-links a { text-decoration: none; color: #94a3b8; font-weight: 500; transition: 0.3s; }
+.nav-links a:hover { color: white; }
+.nav-cta { background: #dc2626; padding: 8px 20px; border-radius: 5px; font-weight: bold; font-size: 0.8rem; }
+
+/* Hero */
 .hero {
-    background: linear-gradient(135deg, #0d6efd, #6610f2);
-    color: white;
-    text-align: center;
-    padding: 80px 20px;
+    height: 70vh;
+    background: linear-gradient(to bottom, rgba(15,23,42,0.5), #0f172a), 
+                url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=1500');
+    background-size: cover; display: flex; align-items: center; justify-content: center;
 }
+.hero-overlay { text-align: center; }
+.badge { background: var(--primary); padding: 5px 15px; border-radius: 20px; font-size: 0.8rem; margin-bottom: 20px; display: inline-block; }
+.hero h1 { font-size: 4rem; margin-bottom: 10px; text-transform: uppercase; }
+.hero-btns { margin-top: 30px; display: flex; gap: 15px; justify-content: center; }
+.btn-primary { background: var(--primary); color: white; border: none; padding: 12px 30px; border-radius: 5px; font-weight: bold; cursor: pointer; }
+.btn-secondary { background: transparent; color: white; border: 1px solid white; padding: 12px 30px; border-radius: 5px; cursor: pointer; }
 
-.hero h1 {
-    font-size: 48px;
-}
+/* Layout */
+.container { padding: 80px 8%; }
+.section-title { font-size: 2.5rem; text-align: center; margin-bottom: 50px; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
 
-.hero h2 {
-    font-size: 32px;
+/* Expertise Box */
+.expertise-box {
+    background: var(--glass); padding: 40px; border-radius: 20px;
+    border: 1px solid rgba(255,255,255,0.1); margin-top: -100px;
+    text-align: center; backdrop-filter: blur(5px);
 }
+.vendor-logos { margin-top: 20px; display: flex; justify-content: center; gap: 20px; opacity: 0.6; font-weight: bold; }
 
-.hero p {
-    font-size: 20px;
+/* Cards */
+.card, .file-card {
+    background: #1e293b; padding: 40px; border-radius: 15px;
+    transition: 0.3s; border: 1px solid transparent;
 }
+.card:hover { border-color: var(--primary); transform: translateY(-10px); }
+.card i { font-size: 2.5rem; color: var(--accent); margin-bottom: 20px; }
+.card h3 { margin-bottom: 10px; }
 
-.btn-main {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 15px 30px;
-    background: #ffc107;
-    color: black;
-    text-decoration: none;
-    font-size: 18px;
-    border-radius: 30px;
-}
+/* Notes & Exams */
+.content-section { display: none; }
+.content-section.active { display: block; animation: fadeIn 0.8s; }
+.dl-link { color: var(--accent); text-decoration: none; display: block; margin-top: 20px; font-weight: bold; }
 
-.about, .courses, .exam-section {
-    padding: 50px 20px;
-    text-align: center;
+.exam-box {
+    background: #1e293b; padding: 30px; border-radius: 15px;
+    display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;
 }
+.btn-start { background: #22c55e; color: white; text-decoration: none; padding: 10px 20px; border-radius: 5px; font-weight: bold; }
 
-h2 {
-    font-size: 36px;
-    margin-bottom: 20px;
-}
+footer { text-align: center; padding: 60px; border-top: 1px solid rgba(255,255,255,0.05); }
 
-.course-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 20px;
-}
-
-.course-card {
-    background: white;
-    padding: 25px;
-    border-radius: 15px;
-    font-size: 18px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-}
-
-.course-card i {
-    font-size: 40px;
-    color: #0d6efd;
-}
-
-.exam-header {
-    background: #198754;
-    color: white;
-    padding: 50px 20px;
-    text-align: center;
-}
-
-.exam-card {
-    background: white;
-    margin: 20px auto;
-    padding: 25px;
-    max-width: 450px;
-    border-radius: 15px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-}
-
-.exam-card h3 {
-    font-size: 22px;
-}
-
-.exam-card a {
-    display: inline-block;
-    margin-top: 15px;
-    padding: 12px 25px;
-    background: #0d6efd;
-    color: white;
-    text-decoration: none;
-    border-radius: 8px;
-}
-
-.back-btn {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-}
-
-footer {
-    background: #212529;
-    color: white;
-    text-align: center;
-    padding: 15px;
-}
+@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
