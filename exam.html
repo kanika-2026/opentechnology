@@ -1,68 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
-    <title>Online Exams | Open Technology</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open Technology | Computer Education Center</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
 
-<header class="exam-header">
-    <h1>Online MCQ Exams</h1>
-    <p>Attempt Topic Wise Tests</p>
-    <a href="index.html" class="back-btn">⬅ Back to Home</a>
-</header>
+    <nav>
+        <div class="logo">OPEN <span>TECHNOLOGY</span></div>
+        <ul class="nav-links">
+            <li><a href="#" onclick="showSection('home')">Home</a></li>
+            <li><a href="#" onclick="showSection('notes')">Study Material</a></li>
+            <li><a href="#" onclick="showSection('exams')">Exam Portal</a></li>
+        </ul>
+        <div class="nav-cta">Admissions 2025-26</div>
+    </nav>
 
-<section class="exam-section">
-    <h2>Available Exams</h2>
+    <section id="home" class="content-section active">
+        <header class="hero">
+            <div class="hero-overlay">
+                <span class="badge">Ashta's Premier Coding Hub</span>
+                <h1>Master the Future of Tech</h1>
+                <p>Coding • Cyber Security • Professional Certification</p>
+                <div class="hero-btns">
+                    <button class="btn-primary" onclick="showSection('exams')">Take a Test</button>
+                    <button class="btn-secondary" onclick="window.location.href='tel:07560453228'">Call Now</button>
+                </div>
+            </div>
+        </header>
 
-    <!-- EXAM LINK SECTION -->
-    <div class="exam-card">
-        <h3>MS Word Home Tab – MCQ Test</h3>
-        <a href="https://forms.gle/jxp3F2GqCFbBUd4s7" target="_blank">Start Exam</a>
-    </div>
+        <div class="container">
+            <div class="expertise-box">
+                <div class="exp-text">
+                    <h2>Expert Training by Harendra Thakur</h2>
+                    <p>Certified Ethical Hacker with 15+ years of industry experience in Indore & Bhopal IT sectors.</p>
+                </div>
+                <div class="vendor-logos">
+                    <span>Cisco</span> <span>Microsoft</span> <span>RedHat</span> <span>Oracle</span> <span>Google</span>
+                </div>
+            </div>
 
-    <div class="exam-card">
-        <h3>MS Word Insert Tab – MCQ Test</h3>
-        <a href="https://forms.gle/LW7V1XxhuZFpSC3x6" target="_blank">Start Exam</a>
-    </div>
-    <div class="exam-card">
-        <h3>MS Word Page layout Tab – MCQ Test</h3>
-        <a href="https://forms.gle/f35HKf1rC9G53DVW8" target="_blank">Start Exam</a>
-    </div>
-      <div class="exam-card">
-        <h3>MS Word Page References Tab – MCQ Test</h3>
-        <a href="https://forms.gle/jcMosvLPdnj2N2Uf7" target="_blank">Start Exam</a>
-    </div>
-      <div class="exam-card">
-        <h3>MS Word Mailings Tab – MCQ Test</h3>
-        <a href="https://forms.gle/9DimcSL9pK8YL9eS9" target="_blank">Start Exam</a>
-    </div>
-       </div>
-      <div class="exam-card">
-        <h3>MS Review Tab – MCQ Test</h3>
-        <a href="https://forms.gle/MxQzEW9CKV7YasT87" target="_blank">Start Exam</a>
-    </div>
-     <div class="exam-card">
-        <h3>MS View Tab – MCQ Test</h3>
-        <a href="https://forms.gle/8sfA4KFM6Baqddcc8" target="_blank">Start Exam</a>
-    </div>
-     <div class="exam-card">
-        <h3>CPCT1 – MCQ Test</h3>
-        <a href="https://forms.gle/BDDtAL1WSPGqWXvH8" target="_blank">Start Exam</a>
-    </div>
+            <h2 class="section-title">Professional Programs</h2>
+            <div class="grid">
+                <div class="card">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Cyber Security</h3>
+                    <p>Ethical Hacking, Network Security & Hardware.</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-code"></i>
+                    <h3>Software Dev</h3>
+                    <p>Python, C, C++, Java, and Web Technologies (HTML, CSS, JS, PHP).</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-graduation-cap"></i>
+                    <h3>Diplomas</h3>
+                    <p>DCA & PGDCA (One Year Govt. Recognized Diplomas).</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-keyboard"></i>
+                    <h3>Job Skills</h3>
+                    <p>Tally Prime & CPCT Preparation for Govt. Jobs.</p>
+                </div>
+            </div>
+        </div>
 
-</section>
+        <footer>
+            <div class="footer-content">
+                <p><i class="fas fa-map-marker-alt"></i> Opposite New Dussehra Maidan Police Station, Ashta</p>
+                <p><i class="fas fa-phone-alt"></i> 07560-453228 | <i class="fab fa-whatsapp"></i> 9229515885</p>
+            </div>
+        </footer>
+    </section>
 
-<footer>
-    <p>© 2025 Open Technology Computer Education</p>
-</footer>
+    <section id="notes" class="content-section">
+        <div class="container">
+            <h2 class="section-title">Download Learning Resources</h2>
+            <div class="grid">
+                <div class="file-card">
+                    <div class="icon-box"><i class="fas fa-file-pdf"></i></div>
+                    <h3>Word Handbook</h3>
+                    <a href="wordnotes.pdf" class="dl-link">Download PDF</a>
+                </div>
+                <div class="file-card">
+                    <div class="icon-box"><i class="fas fa-file-pdf"></i></div>
+                    <h3>Web Development</h3>
+                    <a href="#" class="dl-link">Download PDF</a>
+                </div>
+                <div class="file-card">
+                    <div class="icon-box"><i class="fas fa-file-pdf"></i></div>
+                    <h3>DCA Notes</h3>
+                    <a href="#" class="dl-link">Download PDF</a>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <section id="exams" class="content-section">
+        <div class="container">
+            <h2 class="section-title">Online Assessment Portal</h2>
+            <div class="exam-wrapper">
+                <div class="exam-box">
+                    <div>
+                        <h3>Weekly Skill Assessment</h3>
+                        <p>Check your progress with our weekly coding quiz.</p>
+                    </div>
+                    <a href="https://forms.gle/uzP51WiXKYNpnHjb6" class="btn-start">Start Test <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="exam-box">
+                    <div>
+                        <h3>Mock CPCT Exam</h3>
+                        <p>Practice for your upcoming government computer test.</p>
+                    </div>
+                    <a href="#" class="btn-start">Start Test <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
 </body>
 </html>
-
-
-
-
-
